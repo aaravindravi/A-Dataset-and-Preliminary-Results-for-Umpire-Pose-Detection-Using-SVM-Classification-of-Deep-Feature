@@ -18,8 +18,11 @@ I.
   a. model1_train - Contains files named umpire_xxx.jpg and non_umpire_xxx.jpg
   b. model1_test  - Contains files named umpire_xxx.jpg and non_umpire_xxx.jpg
 
+********************************************************************************************************************
 NOTE: While using the datasets with the provided code, please copy the files into a separate folder name with the
-      respective class name. Alternately, the code can be modified to read the classname directly from each filename of the image.
+      respective class name. Alternately, the code can be modified to read the classname directly from each filename
+      of the image.
+********************************************************************************************************************
 
 II.
   a. model2_train - Contains files named no_ball_xxx.jpg, out_xxx.jpg, sixes_xxx.jpg, 
@@ -27,9 +30,11 @@ II.
   b. model2_test  - Contains files named no_ball_xxx.jpg, out_xxx.jpg, sixes_xxx.jpg, 
                     wide_xxx.jpg and no_action_xxx.jpg
 
-NOTE (Same as above): While using the datasets with the provided code, please copy the files into a separate folder name with the
-                      respective class name. Alternately, the code can be modified to read the classname directly from
-                      each filename of the image. 
+***********************************************************************************************************************
+NOTE (Same as above): While using the datasets with the provided code, please copy the files into a separate folder 
+                      name with the respective class name. Alternately, the code can be modified to read the classname 
+                      directly from each filename of the image.
+***********************************************************************************************************************
 
 The datasets have been split into train and test as used in the paper.
 
