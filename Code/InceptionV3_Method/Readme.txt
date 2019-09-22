@@ -3,7 +3,13 @@ Paper: Ravi, Aravind, Harshwin Venugopal, Sruthy Paul, and Hamid R. Tizhoosh.
 arXiv preprint arXiv:1809.06217 (2018).
 
 Model 1 - For Umpire versus Non-Umpire Classification
-Model 2 - 4 Classes of Umpire Actions - Six, No Ball, Out, Wide Classification
+Model 2 - 5 Classes of Umpire Actions - Six, No Ball, Out, Wide, No Action Classification
+
+***************
+NOTE - Initial Steps
+OPTION 1 : Create folder names same as the class names and copy the images into respective folders
+OPTION 2 : Read and use the class names from the filename directly in the code
+***************
 
 1. Run feature extraction as Step 1 on all datasets
   a. inceptionv3_feature_extraction_model1.py
