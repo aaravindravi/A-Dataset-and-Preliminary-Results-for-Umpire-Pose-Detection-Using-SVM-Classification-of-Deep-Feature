@@ -30,7 +30,7 @@ start_time = time.time()
 #SNOW Dataset 
 for cls in range (1,6):
     #Folders containing the dataset
-    classes = ["no_ball","out","sixes","wide","null_class"]
+    classes = ["no_ball","out","sixes","wide","no_action"]
 
     img_count=0
     feats=[]

@@ -21,6 +21,7 @@ X=[]
 X1 = np.load('class_1data_model1.npy')
 X2 = np.load('class_2data_model1.npy')
 X_data = np.append(X1,X2,axis=0)
+
 #Labels
 Y_data = X_data[:,(X_data.shape[1]-1)]
 
