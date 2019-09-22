@@ -5,5 +5,35 @@ Ravi, Aravind, Harshwin Venugopal, Sruthy Paul, and Hamid R. Tizhoosh.
 In 2018 IEEE Symposium Series on Computational Intelligence (SSCI), pp. 1396-1402. IEEE, 2018.
 
 Paper: https://ieeexplore.ieee.org/abstract/document/8628877/
+SNOW Dataset (Six, No Ball, Out, Wide)
 Dataset: https://drive.google.com/drive/folders/1ljDIz69mJqDzBlUxABP0c34NgdynzWPX 
          https://drive.google.com/open?id=1fXoT_eW-13Qmek4M2jut6ryHBHTzPhqT
+
+*******************************************************************************************************************
+Description
+************
+
+The following dataset contains four folders:
+I.
+  a. model1_train - Contains files named umpire_xxx.jpg and non_umpire_xxx.jpg
+  b. model1_test  - Contains files named umpire_xxx.jpg and non_umpire_xxx.jpg
+
+NOTE: While using the datasets with the provided code, please copy the files into a separate folder name with the
+      respective class name. Alternately, the code can be modified to read the classname directly from each filename of the image.
+
+II.
+  a. model2_train - Contains files named no_ball_xxx.jpg, out_xxx.jpg, sixes_xxx.jpg, 
+                    wide_xxx.jpg and no_action_xxx.jpg
+  b. model2_test  - Contains files named no_ball_xxx.jpg, out_xxx.jpg, sixes_xxx.jpg, 
+                    wide_xxx.jpg and no_action_xxx.jpg
+
+NOTE (Same as above): While using the datasets with the provided code, please copy the files into a separate folder name with the
+                      respective class name. Alternately, the code can be modified to read the classname directly from
+                      each filename of the image. 
+
+The datasets have been split into train and test as used in the paper.
+
+Model 1 - Classify between an Umpire image and a Non Umpire image (Those images that are umpire will be passed to
+          Model 2 for classification in the video summarization pipeline)
+Model 2 - Classify between the five Umpire action classes (Six, No Ball, Out, Wide, No Action)
+
