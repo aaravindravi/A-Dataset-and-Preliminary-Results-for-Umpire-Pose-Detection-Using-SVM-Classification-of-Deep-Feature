@@ -21,8 +21,12 @@ X=[]
 X1 = np.load('class_1data_model1.npy')
 X2 = np.load('class_2data_model1.npy')
 X_data = np.append(X1,X2,axis=0)
-Y_data = X_data[:,2048]
-X_data = X_data[:,0:2048]
+#Labels
+Y_data = X_data[:,(X_data.shape[1]-1)]
+
+#Training Data
+X_data = X_data[:,0:(X_data.shape[1]-1)]
+
 x_tr,x_ts,y_tr,y_ts = train_test_split(X_data, Y_data, test_size=0.2,random_state=10)
 
 #Classifier using Linear SVM

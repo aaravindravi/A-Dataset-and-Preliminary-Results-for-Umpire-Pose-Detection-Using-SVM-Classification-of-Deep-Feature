@@ -30,8 +30,11 @@ X_data = np.append(X_data,X3,axis=0)
 X_data = np.append(X_data,X4,axis=0)
 X_data = np.append(X_data,X5,axis=0)
 
-Y_data = X_data[:,2048]
-X_data = X_data[:,0:2048]
+#Labels
+Y_data = X_data[:,(X_data.shape[1]-1)]
+
+#Training Data
+X_data = X_data[:,0:(X_data.shape[1]-1)]
 
 #Split the data into 80% training and 20% test data
 x_tr,x_ts,y_tr,y_ts = train_test_split(X_data, Y_data, test_size=0.2,random_state=26)
