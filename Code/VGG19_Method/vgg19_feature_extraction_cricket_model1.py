@@ -30,7 +30,7 @@ for layer_num in range(0,len(layers_to_extract)):
     for cls in range (1,3):
         img_count=0
         # Different Class labels
-        classes = ["Non_umpire_390","umpire_390"]
+        classes = ["non_umpire","umpire"]
         #To store the Features
         feats=[]
         
@@ -54,7 +54,7 @@ for layer_num in range(0,len(layers_to_extract)):
         labels = np.ones(len(feature_list))*cls
         feature_list = np.column_stack((feature_list,labels))
         #Save the features as numpy array for further processing
-        np.save("class_cricket"+layers_to_extract[layer_num]+str(cls)+"vgg19_data.npy",feature_list)
+        np.save("class_cricket_model1"+layers_to_extract[layer_num]+str(cls)+"vgg19_data.npy",feature_list)
 
 
 print("--- %s seconds ---" % (time.time() - start_time))

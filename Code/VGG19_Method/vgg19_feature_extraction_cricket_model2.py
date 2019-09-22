@@ -29,7 +29,7 @@ for layer_num in range(0,len(layers_to_extract)):
     for cls in range (1,6):
         img_count=0
         # Different Class labels
-        classes = ["No_Ball","Out","Sixes","Wide","Null_Class"]
+        classes = ["no_ball","out","sixes","wide","no_action"]
         #To store the Features
         feats=[]
         

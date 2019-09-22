@@ -15,7 +15,8 @@ from sklearn.model_selection import LeaveOneOut
 import pickle
 import time
 
-layers_to_extract = ["fc1","fc2"]
+#layers_to_extract = ["fc1","fc2"]
+layers_to_extract = ["fc1"]
 
 layer_num = 0
 
