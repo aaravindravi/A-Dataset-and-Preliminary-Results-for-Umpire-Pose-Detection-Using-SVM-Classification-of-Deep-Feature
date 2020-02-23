@@ -1,4 +1,4 @@
-Request the users to cite the paper when working with the dataset
+Request the users to cite the paper when working with the dataset.
 
 Ravi, Aravind, Harshwin Venugopal, Sruthy Paul, and Hamid R. Tizhoosh. 
 "A Dataset and Preliminary Results for Umpire Pose Detection Using SVM Classification of Deep Features." 
@@ -13,32 +13,47 @@ Dataset: https://drive.google.com/drive/folders/1ljDIz69mJqDzBlUxABP0c34NgdynzWP
 Description
 ************
 
-The following dataset contains four folders:
-I.
-  a. model1_train - Contains files named umpire_xxx.jpg and non_umpire_xxx.jpg
-  b. model1_test  - Contains files named umpire_xxx.jpg and non_umpire_xxx.jpg
+The dataset is provided in the 'data' folder:
+
+I. data/
+  a. umpire_non_umpire - Contains files named umpire_xxx.jpg and non_umpire_xxx.jpg
+  b. umpire_poses  - Contains files named no_ball_xxx.jpg, out_xxx.jpg, sixes_xxx.jpg, 
+                     wide_xxx.jpg and no_action_xxx.jpg
+  
+  The train and test data were split as presented in the reference paper.
 
 ********************************************************************************************************************
-NOTE: While using the datasets with the provided code, please copy the files into a separate folder name with the
-      respective class name. Alternately, the code can be modified to read the classname directly from each filename
-      of the image.
+NOTE: Unzip the folders within the same 'data' directory and run the scripts from the 'code' directory.
 ********************************************************************************************************************
 
-II.
-  a. model2_train - Contains files named no_ball_xxx.jpg, out_xxx.jpg, sixes_xxx.jpg, 
-                    wide_xxx.jpg and no_action_xxx.jpg
-  b. model2_test  - Contains files named no_ball_xxx.jpg, out_xxx.jpg, sixes_xxx.jpg, 
-                    wide_xxx.jpg and no_action_xxx.jpg
+II. code/
+  a. inception - Contains code to:
+                (i) generate deep features for model 1 and model 2 based on pretrained 
+                    inceptionv3 model.
+                (ii) train and save SVM classifiers for model 1 and model 2 based on inceptionv3 features.
+                (iii) generate the summary from a cricket video based on respective classifier.
+  b. vgg19 - Contains code to:
+             (i) generate deep features for model 1 and model 2 based on pretrained 
+                 vgg19 model.
+             (ii) train and save SVM classifiers for model 1 and model 2 based on vgg19 features.
+             (iii) generate the summary from a cricket video based on respective classifier.
+********************************************************************************************************************
+NOTE: The cricket video to geenrate the highlights is not provided in this repo.
+********************************************************************************************************************
 
-***********************************************************************************************************************
-NOTE (Same as above): While using the datasets with the provided code, please copy the files into a separate folder 
-                      name with the respective class name. Alternately, the code can be modified to read the classname 
-                      directly from each filename of the image.
-***********************************************************************************************************************
+III. features/
+  a. inception - Contains the deep features extracted using the Inception V3 model.
+  b. vgg19  - Contains the deep features extracted using the Inception V3 model.
 
-The datasets have been split into train and test as used in the paper.
+Each folder contains features for the respective models to perform cricket highlights generation.
 
 Model 1 - Classify between an Umpire image and a Non Umpire image (Those images that are umpire will be passed to
           Model 2 for classification in the video summarization pipeline)
 Model 2 - Classify between the five Umpire action classes (Six, No Ball, Out, Wide, No Action)
 
+IV. models/
+  a. inception_svm - Contains the SVM model 1 and model 2 trained on inceptionV3 features.
+  b. vgg19_svm - Contains the SVM model 1 and model 2 trained on vgg19 features.
+
+V. results_summary/
+  Contains the output summarized cricket highlights.
