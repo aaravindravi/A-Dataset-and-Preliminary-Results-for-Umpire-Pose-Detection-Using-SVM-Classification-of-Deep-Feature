@@ -5,12 +5,6 @@ arXiv preprint arXiv:1809.06217 (2018).
 Model 1 - For Umpire versus Non-Umpire Classification
 Model 2 - 5 Classes of Umpire Actions - Six, No Ball, Out, Wide, No Action Classification
 
-***************
-NOTE - Initial Steps
-OPTION 1 : Create folder names same as the class names and copy the images into respective folders
-OPTION 2 : Read and use the class names from the filename directly in the code
-***************
-
 1. Run feature extraction as Step 1 on all datasets
   a. vgg19_feature_extraction_cricket_model1.py
   b. vgg19_feature_extraction_cricket_model2.py
@@ -23,5 +17,3 @@ This step is performed to train the the classifer and save the model for use in 
   b. vgg19_classifier_model2.py
 
 3. Run the video summarization on test video
-
-Dataset: https://drive.google.com/drive/folders/1ljDIz69mJqDzBlUxABP0c34NgdynzWPX
